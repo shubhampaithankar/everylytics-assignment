@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <main>
+        <form onsubmit="onSubmit(event)" name="myForm">
+            <div class="form-group">
+                <label for="source">Select your source:</label>
+                <select name="source">
+                    <option value="Google Cloud">Google Cloud</option>
+                    <option value="Option 2">Option 2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pipelineName">Provide a name for pipeline:</label>
+                <input name="pipelineName" type="text" minlength="5" required placeholder="e.g., cust_shop_energy_gkateway001"></input>
+            </div>
+            <div class="form-group">
+                <label for="projectName">GCS project name:</label>
+                <input name="projectName" type="text" minlength="5" required placeholder="project-id"></input>
+            </div>
+            <div class="form-group">
+                <label for="bucketName">GCS bucket name:</label>
+                <input name="bucketName" type="text" minlength="5" required placeholder="gs://your-bucket"></input>
+            </div>
+            <div class="form-group">
+                <label for="files">Input Cloud Storage File(s):</label>
+                <input name="files" type="text" minlength="5" required placeholder="GCS location of your files"></input>
+            </div>
+            <div class="form-group">
+                <label for="creds">GCS credentials:</label>
+                <input name="creds" type="text" minlength="5" required></input>
+            </div>
+            <div class="form-group">
+                <label for="time">Run Every:</label>
+                <input name="time" type="number" min="0" required placeholder="(in minutes)"></input>
+            </div>
+            <div class="btn-group">
+                <button class="btn" type="submit">Create</button>
+                <button class="btn" type="reset">Cancel</button>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
